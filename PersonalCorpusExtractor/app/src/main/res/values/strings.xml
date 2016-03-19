@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PersonalCorpusExtractor</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="app_id">1667796943435912</string>
+    <string name="outputFile">Output File</string>
+    <string name="ok_label">OK!</string>
+
+</resources>

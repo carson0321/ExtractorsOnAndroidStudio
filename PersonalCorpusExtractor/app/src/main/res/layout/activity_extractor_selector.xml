@@ -1,0 +1,146 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".ExtractorSelector"
+    android:weightSum="1">
+
+
+    <!--Begin Ontology Update Section  -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:paddingTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SMS"
+                    android:id="@+id/sms"
+                    android:checked="false"
+                    android:layout_gravity="center_horizontal" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:id="@+id/email"
+                    android:checked="false"
+                    android:layout_gravity="center_horizontal" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Facebook"
+                    android:id="@+id/facebook"
+                    android:checked="true"
+                    android:layout_gravity="center_horizontal" />
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Collect Writing Sample"
+                android:id="@+id/button"
+                android:layout_marginLeft="30dp"
+                android:singleLine="true"
+                android:layout_gravity="right" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Construct Suffix Tree"
+                android:onClick="testTree"
+                android:id="@+id/testTree"
+                android:layout_marginLeft="30dp"
+                android:singleLine="true"
+                android:layout_gravity="right" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Read Tree into Ontology"
+                android:onClick="readFile"
+                android:id="@+id/buttonRead"
+                android:layout_marginLeft="30dp"
+                android:singleLine="true"
+                android:layout_gravity="right" />
+
+            <EditText
+                android:id="@+id/editTextQuery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:text="professor" />
+
+            <TextView
+                android:id="@+id/textViewRefinement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:typeface="monospace"
+                android:text="" />
+
+            <Button
+                android:id="@+id/buttonFindSimilarity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Predict Next Word"
+                android:onClick="findExtensions"
+                android:layout_gravity="right" />
+
+            <EditText
+                android:id="@+id/editTextUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/textViewUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <Button
+                android:id="@+id/buttonUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Manually Update Ontology"
+                android:onClick="updateOntology"
+                android:layout_gravity="right" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="OutPut File:"
+                android:id="@+id/outPutCorpus" />
+
+        </LinearLayout>
+
+
+
+
+
+
+    </ScrollView>
+
+</LinearLayout>
